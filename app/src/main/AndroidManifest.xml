@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.triamatter.mynub">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".core.ShowBookActivity"></activity>
+        <activity android:name=".core.BooksActivity" />
+        <activity android:name=".core.admin.AdminAddRoutineActivity" />
+        <activity android:name=".core.RoutineActivity" />
+        <activity android:name=".core.CRChooserActivity" />
+        <activity android:name=".core.AllNoteActivity" />
+        <activity android:name=".core.ShowNoteActivity" />
+        <activity android:name=".core.admin.AdminAddCourseNoticeActivity" />
+        <activity android:name=".core.admin.AdminAddNoteActivity" />
+        <activity
+            android:name=".middleware.AuthMiddlewareActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".core.ProfileActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".auth.LoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".auth.SignUpActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".core.PortalActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".core.MainActivity"
+            android:screenOrientation="portrait" />
+    </application>
+
+</manifest>

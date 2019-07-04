@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_gradient_light"
+    tools:context=".core.RoutineActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@android:color/white"
+        app:itemIconTint="@drawable/bottom_nav_item_selected"
+        app:itemTextColor="@drawable/bottom_nav_item_selected"
+        app:labelVisibilityMode="unlabeled"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_nav_menu" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/parentNested"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/sundayCardview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="8dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="2dp"
+                app:cardPreventCornerOverlap="true"
+                app:cardUseCompatPadding="true">
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <com.triamatter.mynub.util.EmptyRecyclerView
+                        android:id="@+id/sunday_recyclerview"
+                        android:layout_width="0dp"
+                        android:layout_height="160dp"
+                        android:layout_margin="0dp"
+                        android:clipToPadding="false"
+                        android:paddingRight="0dp"
+                        android:paddingBottom="8dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/sunday" />
+
+                    <TextView
+                        android:id="@+id/sunday"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="8dp"
+                        android:letterSpacing=".1"
+                        android:text="SUNDAY"
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/emptyViewSun"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:text="No Class on Sunday!"
+                        android:textColor="@android:color/black"
+                        android:textSize="18sp"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="@+id/sunday_recyclerview"
+                        app:layout_constraintEnd_toEndOf="@+id/sunday_recyclerview"
+                        app:layout_constraintStart_toStartOf="@+id/sunday_recyclerview"
+                        app:layout_constraintTop_toBottomOf="@+id/sunday" />
+
+                    <TextView
+                        android:id="@+id/monday"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="8dp"
+                        android:letterSpacing=".1"
+                        android:text="MONDAY"
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/sunday_recyclerview" />
+
+                    <com.triamatter.mynub.util.EmptyRecyclerView
+                        android:id="@+id/monday_recyclerview"
+                        android:layout_width="0dp"
+                        android:layout_height="160dp"
+                        android:clipToPadding="false"
+                        android:paddingRight="0dp"
+                        android:paddingBottom="8dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/monday" />
+
+                    <TextView
+                        android:id="@+id/tuesday"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="8dp"
+                        android:letterSpacing=".1"
+                        android:text="TUESDAY"
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/monday_recyclerview" />
+
+                    <TextView
+                        android:id="@+id/wednesday"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="8dp"
+                        android:letterSpacing=".1"
+                        android:text="WEDNESDAY"
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tuesday_recyclerview" />
+
+                    <TextView
+                        android:id="@+id/thursday"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="8dp"
+                        android:letterSpacing=".1"
+                        android:text="THURSDAY"
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/wednesday_recyclerview" />
+
+                    <TextView
+                        android:id="@+id/friday"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="8dp"
+                        android:letterSpacing=".1"
+                        android:text="FRIDAY"
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/thursday_recyclerview" />
+
+                    <TextView
+                        android:id="@+id/saturday"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="8dp"
+                        android:letterSpacing=".1"
+                        android:text="SATURDAY"
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/friday_recyclerview" />
+
+                    <com.triamatter.mynub.util.EmptyRecyclerView
+                        android:id="@+id/saturday_recyclerview"
+                        android:layout_width="0dp"
+                        android:layout_height="160dp"
+                        android:clipToPadding="false"
+                        android:paddingRight="0dp"
+                        android:paddingBottom="8dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/saturday" />
+
+                    <com.triamatter.mynub.util.EmptyRecyclerView
+                        android:id="@+id/friday_recyclerview"
+                        android:layout_width="0dp"
+                        android:layout_height="160dp"
+                        android:clipToPadding="false"
+                        android:paddingRight="0dp"
+                        android:paddingBottom="8dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/friday" />
+
+                    <com.triamatter.mynub.util.EmptyRecyclerView
+                        android:id="@+id/thursday_recyclerview"
+                        android:layout_width="0dp"
+                        android:layout_height="160dp"
+                        android:clipToPadding="false"
+                        android:paddingRight="0dp"
+                        android:paddingBottom="8dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/thursday" />
+
+                    <TextView
+                        android:id="@+id/emptyViewMon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="No Class on Monday!"
+                        android:textColor="@android:color/black"
+                        android:textSize="18sp"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="@+id/monday_recyclerview"
+                        app:layout_constraintEnd_toEndOf="@+id/monday_recyclerview"
+                        app:layout_constraintStart_toStartOf="@+id/monday_recyclerview"
+                        app:layout_constraintTop_toBottomOf="@+id/monday" />
+
+                    <com.triamatter.mynub.util.EmptyRecyclerView
+                        android:id="@+id/tuesday_recyclerview"
+                        android:layout_width="0dp"
+                        android:layout_height="160dp"
+                        android:clipToPadding="false"
+                        android:paddingRight="0dp"
+                        android:paddingBottom="8dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tuesday" />
+
+                    <TextView
+                        android:id="@+id/emptyViewTue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:text="No Class on Tuesday!"
+                        android:textColor="@android:color/black"
+                        android:textSize="18sp"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="@+id/tuesday_recyclerview"
+                        app:layout_constraintEnd_toEndOf="@+id/tuesday_recyclerview"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tuesday" />
+
+                    <TextView
+                        android:id="@+id/emptyViewThur"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="No Class on Thursday!"
+                        android:textColor="@android:color/black"
+                        android:textSize="18sp"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="@+id/thursday_recyclerview"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/thursday" />
+
+                    <TextView
+                        android:id="@+id/emptyViewFri"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="No class on Friday!"
+                        android:textColor="@android:color/black"
+                        android:textSize="18sp"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="@+id/friday_recyclerview"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/friday" />
+
+                    <TextView
+                        android:id="@+id/emptyViewSat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="No class on Saturday!"
+                        android:textColor="@android:color/black"
+                        android:textSize="18sp"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="@+id/saturday_recyclerview"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/saturday_recyclerview"
+                        app:layout_constraintTop_toBottomOf="@+id/saturday" />
+
+                    <TextView
+                        android:id="@+id/emptyViewWed"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:text="No class on Wednesday!"
+                        android:textColor="@android:color/black"
+                        android:textSize="18sp"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="@+id/wednesday_recyclerview"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/wednesday_recyclerview" />
+
+                    <com.triamatter.mynub.util.EmptyRecyclerView
+                        android:id="@+id/wednesday_recyclerview"
+                        android:layout_width="0dp"
+                        android:layout_height="160dp"
+                        android:clipToPadding="false"
+                        android:paddingRight="0dp"
+                        android:paddingBottom="8dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/wednesday" />
+
+                </android.support.constraint.ConstraintLayout>
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "33352882581",
+    "firebase_url": "https://mynub-d72ad.firebaseio.com",
+    "project_id": "mynub-d72ad",
+    "storage_bucket": "mynub-d72ad.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:33352882581:android:def43a418f41fd08",
+        "android_client_info": {
+          "package_name": "com.triamatter.mynub"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "33352882581-d1ugd71emjerg89765iaidvt0gn5ptlf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.triamatter.mynub",
+            "certificate_hash": "b199e425cfcf1cc58634fcee0b1c06a890d96639"
+          }
+        },
+        {
+          "client_id": "33352882581-scif67bo7j5jjt6fvitf8tquo0k70nes.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyANgrA2pvwznUO3zfhkEJKLx1IuKaKsy_I"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "33352882581-scif67bo7j5jjt6fvitf8tquo0k70nes.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
